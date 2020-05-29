@@ -3,6 +3,18 @@ In following the recommendations made by the Center for Disease Control and Worl
 
 [Click here](https://redlevelgroup.com/contact-red-level/clearpass-webinar/) to request step-by-step instructions.
 
+## Releases
+What's New
+
+#### v1.1.2
+- Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
+- Bug Fix: Some users were unable to pre-register
+
+#### v1.1
+- Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
+- Bug Fix: Some users were unable to pre-register
+
+
 ## Features
 
 ### Self Health Declaration Form
