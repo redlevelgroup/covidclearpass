@@ -3,8 +3,9 @@ In following the recommendations made by the Center for Disease Control and Worl
 
 [Click here](https://redlevelgroup.com/contact-red-level/clearpass-webinar/) to request step-by-step instructions.
 
-## Releases
+## Release Notes
 What's New
+[Click here](https://redlevelgroup.com/contact-red-level/clearpass-webinar/) to request step-by-step instructions.
 
 #### v1.1.2
 - Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
