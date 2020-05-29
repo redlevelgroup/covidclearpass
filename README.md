@@ -5,7 +5,6 @@ In following the recommendations made by the Center for Disease Control and Worl
 
 ## Release Notes
 What's New
-[Click here](https://redlevelgroup.com/contact-red-level/clearpass-webinar/) to request step-by-step instructions.
 
 #### v1.1.2
 - Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
@@ -16,6 +15,10 @@ What's New
 - Added ability to capture temperature value in Self-Declaration Form. 
 - Added Microsoft 365 Users Connector. 
 - Bug Fix: Corrected issue with third question in Self Declaration Form to reject access when answer is Yes. 
+
+
+[Click here](https://redlevelgroup.com/contact-red-level/clearpass-webinar/) to request step-by-step instructions.
+
 
 ## Features
 
