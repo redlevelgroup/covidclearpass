@@ -11,9 +11,10 @@ What's New
 - Bug Fix: Some users were unable to pre-register
 
 #### v1.1
-- Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
-- Bug Fix: Some users were unable to pre-register
-
+- Temperature question is now required in Self-Declaration Form. 
+- Added ability to capture temperature value in Self-Declaration Form. 
+- Added Microsoft 365 Users Connector. 
+- Bug Fix: Corrected issue with third question in Self Declaration Form to reject access when answer is Yes. 
 
 ## Features
 
