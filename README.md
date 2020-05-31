@@ -8,6 +8,8 @@ What's New
 
 #### v1.2
 - Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
+- New Flow to centrlize emails. 
+- New Flow to check the site count
 
 #### v1.1.2
 - Bug Fix: Some users were unable to pre-register
