@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.20.2004.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-45293FFAD1794F928270D60FCDE13B93">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-45293FFAD1794F928270D60FCDE13B93" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:SiteSettings AllowDesigner="true" AllowCreateDeclarativeWorkflow="true" AllowSaveDeclarativeWorkflowAsTemplate="true" AllowSavePublishDeclarativeWorkflow="true" SearchBoxInNavBar="Inherit" SearchCenterUrl="" />
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="10" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:Security AssociatedOwnerGroup="{sitetitle} Owners" AssociatedMemberGroup="{sitetitle} Members" AssociatedVisitorGroup="{sitetitle} Visitors">
+        <pnp:AdditionalAdministrators>
+          <pnp:User Name="i:0#.f|membership|aaljishi@redlevelvalodemo.onmicrosoft.com" />
+        </pnp:AdditionalAdministrators>
+        <pnp:AdditionalOwners>
+          <pnp:User Name="i:0#.f|membership|aaljishi@redlevelvalodemo.onmicrosoft.com" />
+        </pnp:AdditionalOwners>
+        <pnp:AdditionalVisitors>
+          <pnp:User Name="c:0-.f|rolemanager|spo-grid-all-users/29465df7-ba13-4003-a2dd-e6b741ea3229" />
+        </pnp:AdditionalVisitors>
+        <pnp:Permissions />
+      </pnp:Security>
+      <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="true" />
+        </pnp:GlobalNavigation>
+        <pnp:CurrentNavigation NavigationType="StructuralLocal">
+          <pnp:StructuralNavigation RemoveExistingNodes="true">
+            <pnp:NavigationNode Title="Home" Url="{site}" />
+            <pnp:NavigationNode Title="Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" />
+            <pnp:NavigationNode Title="Pages" Url="{site}/SitePages/Forms/ByAuthor.aspx" />
+            <pnp:NavigationNode Title="Site contents" Url="{site}/_layouts/15/viewlsts.aspx" IsExternal="true" />
+            <pnp:NavigationNode Title="Recent" Url="{site}" />
+          </pnp:StructuralNavigation>
+        </pnp:CurrentNavigation>
+      </pnp:Navigation>
+      <pnp:Lists>
+        <pnp:ListInstance Title="Company Sites" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Company Sites" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Company Sites/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Company Sites/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Company Sites/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{8C8D9CBA-B0A1-4CF2-B272-D18811513604}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Company Sites/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Max_x0020_Visitors" />
+                <FieldRef Name="Site_x0020_Admin" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Number" DisplayName="Max Visitors" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Min="0" Max="500" Decimals="0" ID="{a1c795a2-bc09-4107-ad27-51a461ccfcb7}" SourceID="{{listid:Company Sites}}" StaticName="Max_x0020_Visitors" Name="Max_x0020_Visitors" ColName="float1" RowOrdinal="0">
+              <Default>0</Default>
+            </Field>
+            <Field Type="User" DisplayName="Site Admin" List="UserInfo" Required="TRUE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{41f0c114-a0e2-4e2b-9de0-1f796cfc7636}" SourceID="{{listid:Company Sites}}" StaticName="Site_x0020_Admin" Name="Site_x0020_Admin" ColName="int1" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="News" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/News" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/News/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/News/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/News/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{234B5B63-A43B-4B15-B68D-EB52DD564D7B}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/News/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Article" />
+                <FieldRef Name="Article_x0020_Short" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Note" DisplayName="Article" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" ID="{cad0bf2b-5986-4694-a2be-a66d51bf3dc3}" SourceID="{{listid:News}}" StaticName="Article" Name="Article" ColName="ntext2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Article Short" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{19b4db64-0c40-47a6-b3dd-9121e6ea84c2}" SourceID="{{listid:News}}" StaticName="Article_x0020_Short" Name="Article_x0020_Short" ColName="nvarchar4" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Reported Users" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Reported Users" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Reported Users/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Reported Users/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Reported Users/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{01A88D3E-E653-4F1C-95F2-63D243C73352}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Reported Users/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="UserAccount" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="User Account" Format="Dropdown" List="UserInfo" Name="UserAccount" Title="User Account" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{a34c40cf-96c9-4199-9dc5-9ba55c06f008}" SourceID="{{listid:Reported Users}}" StaticName="UserAccount" ColName="int1" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Self Declaration Form" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Self Declaration Form" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Self Declaration Form/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Self Declaration Form/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Self Declaration Form/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ReadSecurity="2" WriteSecurity="2" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{09694986-9D3B-4942-BAD4-7A05350C858B}" DefaultView="TRUE" Type="HTML" TabularView="FALSE" DisplayName="All Items" Url="{site}/Lists/Self Declaration Form/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+                <Where>
+                  <Eq>
+                    <FieldRef Name="Author" />
+                    <Value Type="User">0</Value>
+                  </Eq>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Title" />
+                <FieldRef Name="Company_x0020_Site" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="CheckOutTime" />
+                <FieldRef Name="ByAnotherPerson" />
+                <FieldRef Name="ActualTemp" />
+                <FieldRef Name="Symptoms" />
+                <FieldRef Name="Travel14Days" />
+                <FieldRef Name="Created" />
+                <FieldRef Name="Author" />
+              </ViewFields>
+              <RowLimit>1</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="Company Site" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{0a7d7130-9735-493c-83fd-09d29316db10}" SourceID="{{listid:Self Declaration Form}}" StaticName="Company_x0020_Site" Name="Company_x0020_Site" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="Date" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{ad4e84b1-2c90-4096-9edf-b44603e1da28}" SourceID="{{listid:Self Declaration Form}}" StaticName="Date" Name="Date" ColName="datetime1" RowOrdinal="0">
+              <Default>[today]</Default>
+            </Field>
+            <Field Type="Text" DisplayName="Symptoms" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{4bde08c4-dfe3-40c3-a394-f83bb5bfc053}" SourceID="{{listid:Self Declaration Form}}" StaticName="Symptoms" Name="Symptoms" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="ContactWith14days" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{c49d77f1-b303-4baa-a3b7-46af18d0b49d}" SourceID="{{listid:Self Declaration Form}}" StaticName="ContactWith14days" Name="ContactWith14days" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Travel14Days" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{ea3fa562-a031-4dd3-b26b-4ffedc6f139d}" SourceID="{{listid:Self Declaration Form}}" StaticName="Travel14Days" Name="Travel14Days" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Type="Boolean" DisplayName="ByAnotherPerson" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{acb5a21c-c71d-4b66-99a6-ba290029c9fd}" SourceID="{{listid:Self Declaration Form}}" StaticName="ByAnotherPerson" Name="ByAnotherPerson" ColName="bit1" RowOrdinal="0">
+              <Default>0</Default>
+            </Field>
+            <Field Type="DateTime" DisplayName="CheckOutTime" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{b2f8beb9-dab1-45b2-9528-d2574dbfef71}" SourceID="{{listid:Self Declaration Form}}" StaticName="CheckOutTime" Name="CheckOutTime" ColName="datetime2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="StringDate" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{0164b980-4e79-40db-abef-12f9cf2feabe}" SourceID="{{listid:Self Declaration Form}}" StaticName="StringDate" Name="StringDate" ColName="nvarchar8" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="ActualTemp" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{3a9598e8-fd24-4b02-ab91-4b8dd4eaaa98}" SourceID="{{listid:Self Declaration Form}}" StaticName="ActualTemp" Name="ActualTemp" ColName="float1" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://10-southcentralus1.pushp.svc.ms/notifications?token=w2-74c5ddbd-0fc7-4e88-a808-d082f01b08b4" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://unitedstates-002.azure-apim.net/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-51.westus.logic.azure.com%252fworkflows%252f731cd48dd6f94e99a4a7a9edaf5bd6bf%252ftriggers%252fWhen_an_item_is_created%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created%25252Fread%2526sv%253d1.0%2526sig%253d55P2TxFfbqCDSCqCBkJaiHWBl2Osh3wrlErAYDewcEY" ExpiresInDays="2" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Visit Registration Form" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Site Visit Registration Form" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Site Visit Registration Form/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Site Visit Registration Form/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Site Visit Registration Form/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{786BCFFC-DF69-4D10-AA17-CA0FB822E490}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Site Visit Registration Form/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="Site" />
+                <FieldRef Name="Created" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="StringDate" />
+                <FieldRef Name="Status" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="DateTime" DisplayName="Date" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{73eadaed-16e8-445d-8724-1c7c512f4ef1}" SourceID="{{listid:Site Visit Registration Form}}" StaticName="Date" Name="Date" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Site" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{ea10b56f-6f71-4cc4-9346-6d830e4cca57}" SourceID="{{listid:Site Visit Registration Form}}" StaticName="Site" Name="Site" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="StringDate" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{246edef5-dca8-47a5-9db4-bcee12cfc45e}" SourceID="{{listid:Site Visit Registration Form}}" StaticName="StringDate" Name="StringDate" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{f339c023-ff72-4283-a3ef-88d03d4fde05}" SourceID="{{listid:Site Visit Registration Form}}" StaticName="Status" Name="Status" ColName="nvarchar6" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://unitedstates-002.azure-apim.net/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-08.westus.logic.azure.com%252fworkflows%252fc0e09a35cdc6442784615e4bde242a20%252ftriggers%252fWhen_an_item_is_created_or_modified%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Fread%2526sv%253d1.0%2526sig%253dKuU-XACsIoO8ESFyDKy8g_E3-M4tpxYjPILHjp2CBMI" ExpiresInDays="3" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Settings" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Settings" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Settings/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Settings/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Settings/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{EE5AA46A-EEFD-4C76-A62F-45E8A60BA31D}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Settings/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="SettingText" />
+                <FieldRef Name="SettingsRich" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Note" DisplayName="SettingText" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" Sortable="FALSE" ID="{36cf88ae-0cbb-4f91-86b0-f4fe15264cca}" SourceID="{{listid:Settings}}" StaticName="SettingText" Name="SettingText" ColName="ntext2" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="SettingsRich" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" ID="{9253ca16-4df4-4258-ac0a-726cb70419d6}" SourceID="{{listid:Settings}}" StaticName="SettingsRich" Name="SettingsRich" ColName="ntext3" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Prevention</pnp:DataValue>
+              <pnp:DataValue FieldName="SettingText" />
+              <pnp:DataValue FieldName="SettingsRich" />
+              <pnp:DataValue FieldName="Order">100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+          </pnp:DataRows>
+        </pnp:ListInstance>
+      </pnp:Lists>
+      <pnp:Header Layout="Standard" MenuStyle="MegaMenu" />
+      <pnp:Footer Enabled="true" RemoveExistingNodes="false" />
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
