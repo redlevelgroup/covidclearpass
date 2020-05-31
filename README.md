@@ -6,8 +6,10 @@ In following the recommendations made by the Center for Disease Control and Worl
 ## Release Notes
 What's New
 
-#### v1.1.2
+#### v1.2
 - Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
+
+#### v1.1.2
 - Bug Fix: Some users were unable to pre-register
 
 #### v1.1
