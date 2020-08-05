@@ -1,20 +1,15 @@
 <?xml version="1.0"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
   <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.20.2004.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-45293FFAD1794F928270D60FCDE13B93">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-45293FFAD1794F928270D60FCDE13B93" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-D113F19C2815420D902E8433473CCA40">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-D113F19C2815420D902E8433473CCA40" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:WebSettings RequestAccessEmail="" NoCrawl="true" WelcomePage="SitePages/Home.aspx" SiteLogo="" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="true" ExcludeFromOfflineClient="true" MembersCanShare="true" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
       <pnp:SiteSettings AllowDesigner="true" AllowCreateDeclarativeWorkflow="true" AllowSaveDeclarativeWorkflowAsTemplate="true" AllowSavePublishDeclarativeWorkflow="true" SearchBoxInNavBar="Inherit" SearchCenterUrl="" />
       <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="10" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:PropertyBagEntries>
+        <pnp:PropertyBagEntry Key="NoCrawl" Value="true" Overwrite="false" />
+      </pnp:PropertyBagEntries>
       <pnp:Security AssociatedOwnerGroup="{sitetitle} Owners" AssociatedMemberGroup="{sitetitle} Members" AssociatedVisitorGroup="{sitetitle} Visitors">
-        <pnp:AdditionalAdministrators>
-          <pnp:User Name="i:0#.f|membership|aaljishi@redlevelvalodemo.onmicrosoft.com" />
-        </pnp:AdditionalAdministrators>
-        <pnp:AdditionalOwners>
-          <pnp:User Name="i:0#.f|membership|aaljishi@redlevelvalodemo.onmicrosoft.com" />
-        </pnp:AdditionalOwners>
-        <pnp:AdditionalVisitors>
-          <pnp:User Name="c:0-.f|rolemanager|spo-grid-all-users/29465df7-ba13-4003-a2dd-e6b741ea3229" />
-        </pnp:AdditionalVisitors>
         <pnp:Permissions />
       </pnp:Security>
       <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
@@ -27,18 +22,45 @@
             <pnp:NavigationNode Title="Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" />
             <pnp:NavigationNode Title="Pages" Url="{site}/SitePages/Forms/ByAuthor.aspx" />
             <pnp:NavigationNode Title="Site contents" Url="{site}/_layouts/15/viewlsts.aspx" IsExternal="true" />
-            <pnp:NavigationNode Title="Recent" Url="{site}" />
           </pnp:StructuralNavigation>
         </pnp:CurrentNavigation>
       </pnp:Navigation>
       <pnp:Lists>
+        <pnp:ListInstance Title="CheckInHelper" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/CheckInHelper" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/CheckInHelper/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/CheckInHelper/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/CheckInHelper/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{744CAE27-4DD6-4B3E-B767-0998E15B5C53}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/CheckInHelper/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="Site" />
+                <FieldRef Name="oID" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="DateTime" DisplayName="Date" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{5537d699-83e9-4b3f-9d3a-36f289478540}" SourceID="{{listid:CheckInHelper}}" StaticName="Date" Name="Date" ColName="datetime1" RowOrdinal="0" CustomFormatter="" CalType="0" Version="1" />
+            <Field Type="Text" DisplayName="Site" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{34a0871f-e93d-4221-9fe7-a05566207533}" SourceID="{{listid:CheckInHelper}}" StaticName="Site" Name="Site" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="oID" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{ed7ff94c-145b-4a7a-9e16-b7f19faa1486}" SourceID="{{listid:CheckInHelper}}" StaticName="oID" Name="oID" ColName="float1" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
         <pnp:ListInstance Title="Company Sites" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Company Sites" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Company Sites/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Company Sites/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Company Sites/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{8C8D9CBA-B0A1-4CF2-B272-D18811513604}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Company Sites/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{C2E4E3C4-67C1-430E-8316-E2DD188EE5E1}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Company Sites/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -66,7 +88,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{234B5B63-A43B-4B15-B68D-EB52DD564D7B}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/News/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{38A45735-DCD8-4ED9-9ECB-68669AE69CB5}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/News/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -85,6 +107,9 @@
             <Field Type="Note" DisplayName="Article" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" ID="{cad0bf2b-5986-4694-a2be-a66d51bf3dc3}" SourceID="{{listid:News}}" StaticName="Article" Name="Article" ColName="ntext2" RowOrdinal="0" />
             <Field Type="Text" DisplayName="Article Short" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{19b4db64-0c40-47a6-b3dd-9121e6ea84c2}" SourceID="{{listid:News}}" StaticName="Article_x0020_Short" Name="Article_x0020_Short" ColName="nvarchar4" RowOrdinal="0" />
           </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://14-southcentralus1.pushp.svc.ms/notifications?token=w0-b14e14ba-391b-4e0c-9569-aff9207b9c6f" ExpiresInDays="1" />
+          </pnp:Webhooks>
         </pnp:ListInstance>
         <pnp:ListInstance Title="Reported Users" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Reported Users" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Reported Users/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Reported Users/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Reported Users/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
@@ -92,7 +117,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{01A88D3E-E653-4F1C-95F2-63D243C73352}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Reported Users/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{9FD11647-FB7D-49EF-86FC-2A76EC3FB1BF}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Reported Users/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -117,7 +142,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{09694986-9D3B-4942-BAD4-7A05350C858B}" DefaultView="TRUE" Type="HTML" TabularView="FALSE" DisplayName="All Items" Url="{site}/Lists/Self Declaration Form/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{29B2FF7F-0797-449F-8F92-4C7A8F5550AB}" DefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Self Declaration Form/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -163,7 +188,6 @@
             <Field Type="Number" DisplayName="ActualTemp" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{3a9598e8-fd24-4b02-ab91-4b8dd4eaaa98}" SourceID="{{listid:Self Declaration Form}}" StaticName="ActualTemp" Name="ActualTemp" ColName="float1" RowOrdinal="0" />
           </pnp:Fields>
           <pnp:Webhooks>
-            <pnp:Webhook ServerNotificationUrl="https://10-southcentralus1.pushp.svc.ms/notifications?token=w2-74c5ddbd-0fc7-4e88-a808-d082f01b08b4" ExpiresInDays="1" />
             <pnp:Webhook ServerNotificationUrl="https://unitedstates-002.azure-apim.net/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-51.westus.logic.azure.com%252fworkflows%252f731cd48dd6f94e99a4a7a9edaf5bd6bf%252ftriggers%252fWhen_an_item_is_created%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created%25252Fread%2526sv%253d1.0%2526sig%253d55P2TxFfbqCDSCqCBkJaiHWBl2Osh3wrlErAYDewcEY" ExpiresInDays="2" />
           </pnp:Webhooks>
         </pnp:ListInstance>
@@ -173,7 +197,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{786BCFFC-DF69-4D10-AA17-CA0FB822E490}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Site Visit Registration Form/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{E5072BB2-F00B-48DB-9E1B-D14326902584}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Site Visit Registration Form/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -201,7 +225,7 @@
             <Field Type="Text" DisplayName="Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{f339c023-ff72-4283-a3ef-88d03d4fde05}" SourceID="{{listid:Site Visit Registration Form}}" StaticName="Status" Name="Status" ColName="nvarchar6" RowOrdinal="0" />
           </pnp:Fields>
           <pnp:Webhooks>
-            <pnp:Webhook ServerNotificationUrl="https://unitedstates-002.azure-apim.net/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-08.westus.logic.azure.com%252fworkflows%252fc0e09a35cdc6442784615e4bde242a20%252ftriggers%252fWhen_an_item_is_created_or_modified%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Fread%2526sv%253d1.0%2526sig%253dKuU-XACsIoO8ESFyDKy8g_E3-M4tpxYjPILHjp2CBMI" ExpiresInDays="3" />
+            <pnp:Webhook ServerNotificationUrl="https://unitedstates-002.azure-apim.net/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-08.westus.logic.azure.com%252fworkflows%252fc0e09a35cdc6442784615e4bde242a20%252ftriggers%252fWhen_an_item_is_created_or_modified%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Fread%2526sv%253d1.0%2526sig%253dKuU-XACsIoO8ESFyDKy8g_E3-M4tpxYjPILHjp2CBMI" ExpiresInDays="4" />
           </pnp:Webhooks>
         </pnp:ListInstance>
         <pnp:ListInstance Title="Settings" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Settings" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Settings/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Settings/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Settings/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
@@ -210,7 +234,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{EE5AA46A-EEFD-4C76-A62F-45E8A60BA31D}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Settings/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{9F1B6EC1-5BD3-4AB2-B978-BCC4052E05AD}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Settings/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -242,7 +266,7 @@
         </pnp:ListInstance>
       </pnp:Lists>
       <pnp:Header Layout="Standard" MenuStyle="MegaMenu" />
-      <pnp:Footer Enabled="true" RemoveExistingNodes="false" />
+      <pnp:Footer Enabled="true" RemoveExistingNodes="true" />
     </pnp:ProvisioningTemplate>
   </pnp:Templates>
 </pnp:Provisioning>
