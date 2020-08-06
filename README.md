@@ -1,7 +1,19 @@
 # COVID ClearPass App
-In following the recommendations made by the Center for Disease Control and World Health Organization, The COVID ClearPass App enables organizations to address location capacity restrictions and health screening requirements when entering the workplace.
+The COVID-19 pandemic has fundamentally changed how we live, work, and interact. Our new normal is anything but. Social distancing, location capacity restrictions, and health screenings are now everyday business challenges.
 
-[Click here](https://redlevelgroup.com/contact-red-level/clearpass-webinar/) to request step-by-step instructions.
+We designed the COVID ClearPass app from the ground up with safety in mind. ClearPass helps you take proper measures to prevent the spread of the virus while maintaining a socially distanced workplace. With ClearPass, your workforce has access to mission-critical tools right on their phone; screen for COVID symptoms, queue location access, and share key information.
+
+Red Level offers two distinct versions of the COVID ClearPass app for organizations of all sizes – a free version that integrates with your existing Microsoft 365 platform and a paid web app version that works great for users of G-Suite and others.
+
+Built from the latest State Executive Orders, Centers for Disease Control and Prevention guidelines, and the World Health Organization recommendations, ClearPass helps you protect your workforce and protect your business.
+
+-------------
+This page contains the free version that integrates with your existing Microsoft 365 platform.
+Specs: SharePoint, Power Apps, Power Automate, and Power BI.
+
+More information available in the [Red Level - ClearPass site](https://redlevelgroup.com/contact-red-level/clearpass/)
+
+[Click here](https://redlevelgroup.com/contact-red-level/clearpass/) to request step-by-step instructions.
 
 ## Release Notes
 What's New
