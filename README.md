@@ -6,6 +6,18 @@ In following the recommendations made by the Center for Disease Control and Worl
 ## Release Notes
 What's New
 
+#### 1.3
+-	Pre-Registration: If a user is on the waitlist and a spot opens up, the status of the user on the waitlist shows approved 
+-	Corrected spelling of ‘Permitted’ message
+-	Auto Populate Name of Employee (Authenticated user)
+-	Updated Date to correct caching issue during Check In Time
+-	Pre-Registration allowing 1 extra person to be approved
+-	Home Screen Check in & pre-registration update in real-time
+-	Pre-Registration while checked in didn't clear reserve spot
+-	Removed Site Count Flow
+-	Flow that creates pre-registration list
+-	Site Count Helper Flow - Check In's
+
 #### 1.2.1
 - Cleanup to the pnp script.
 you only need to run the powershell if you have downloaded 1.2 between 5/22 - 5/31
