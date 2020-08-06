@@ -7,7 +7,8 @@ In following the recommendations made by the Center for Disease Control and Worl
 What's New
 
 #### 1.3
--	Pre-Registration: If a user is on the waitlist and a spot opens up, the status of the user on the waitlist shows approved 
+Released on 8/5/2020
+- Pre-Registration: If a user is on the waitlist and a spot opens up, the status of the user on the waitlist shows approved 
 -	Corrected spelling of ‘Permitted’ message
 -	Auto Populate Name of Employee (Authenticated user)
 -	Updated Date to correct caching issue during Check In Time
