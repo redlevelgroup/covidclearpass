@@ -19,7 +19,7 @@ More information available in the [Red Level - ClearPass site](https://redlevelg
 What's New
 
 #### 1.3
-Released on 8/5/2020
+8/5/2020
 - Pre-Registration: If a user is on the waitlist and a spot opens up, the status of the user on the waitlist shows approved 
 -	Corrected spelling of ‘Permitted’ message
 -	Auto Populate Name of Employee (Authenticated user)
@@ -44,6 +44,7 @@ you only need to run the powershell if you have downloaded 1.2 between 5/22 - 5/
 - Bug Fix: Some users were unable to pre-register
 
 #### v1.1
+5/3/2020
 - Temperature question is now required in Self-Declaration Form. 
 - Added ability to capture temperature value in Self-Declaration Form. 
 - Added Microsoft 365 Users Connector. 
