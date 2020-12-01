@@ -20,16 +20,14 @@ What's New
 
 #### 1.3
 8/5/2020
-- Pre-Registration: If a user is on the waitlist and a spot opens up, the status of the user on the waitlist shows approved 
--	Corrected spelling of ‘Permitted’ message
--	Auto Populate Name of Employee (Authenticated user)
--	Updated Date to correct caching issue during Check In Time
--	Pre-Registration allowing 1 extra person to be approved
--	Home Screen Check in & pre-registration update in real-time
--	Pre-Registration while checked in didn't clear reserve spot
--	Removed Site Count Flow
--	Flow that creates pre-registration list
--	Site Count Helper Flow - Check In's
+-	Auto-populate names of employees in the Self-Declaration form 
+-	Updated the cache check-in time 
+-	Pre-registration status updates 
+-	Home screen check-in/pre-registration to update in real-time 
+-	Check-in status will now clear the reserved pre-registration spot 
+-	Workflow reconfigurations
+-	Pre-registration list cleanup workflow added deleted pre-registration for previous dates older than two days
+
 
 #### 1.2.1
 - Cleanup to the pnp script.
