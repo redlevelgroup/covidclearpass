@@ -34,7 +34,7 @@ What's New
 you only need to run the powershell if you have downloaded 1.2 between 5/22 - 5/31
 
 #### v1.2
-- Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins)
+- Self Declaration is hidden to everyone by default (instructions on how to view the data for site admins are provided)
 - New Flow to centralized emails
 - New Flow to check the site count
 
