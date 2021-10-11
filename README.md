@@ -18,6 +18,10 @@ More information available in the [Red Level - ClearPass site](https://redlevelg
 ## Release Notes
 What's New
 
+#### 1.3.2
+10/11/2021
+- Updates to functions to work with Power Apps engine
+ 
 #### 1.3
 8/5/2020
 -	Auto-populate names of employees in the Self-Declaration form 
