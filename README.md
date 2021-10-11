@@ -20,7 +20,7 @@ What's New
 
 #### 1.3.2
 10/11/2021
-- Updates to functions to work with Power Apps engine
+- Updated functions to work with Power Apps engine. This update optimizes ClearPass to be compatible with newest Power Apps engine release. 
  
 #### 1.3
 8/5/2020
